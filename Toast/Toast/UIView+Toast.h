@@ -41,7 +41,9 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 // displays toast with an activity spinner
 - (void)makeToastActivity;
+- (void)makeToastActivityWithMessage:(NSString *)message;
 - (void)makeToastActivity:(id)position;
+- (void)makeToastActivityWithMessage:(NSString *)message position:(id)position;
 - (void)hideToastActivity;
 
 // the showToast methods display any view as toast
