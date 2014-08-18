@@ -95,7 +95,19 @@
             _isShowingActivity = !_isShowingActivity;
             break;
         }
-            
+
+        case 7: {
+            if (!_isShowingActivity) {
+                [button setTitle:@"Hide Activity" forState:UIControlStateNormal];
+                [self.view makeToastActivityWithMessage:@"Toast being prepared. Please stand by as we attempt to achieve optimal browning..."];
+            } else {
+                [button setTitle:@"Show Activity with message" forState:UIControlStateNormal];
+                [self.view hideToastActivity];
+            }
+            _isShowingActivity = !_isShowingActivity;
+            break;
+        }
+
         default: break;
             
     }
