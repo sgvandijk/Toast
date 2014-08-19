@@ -101,7 +101,8 @@ static const NSString * CSToastActivityViewKey  = @"CSToastActivityViewKey";
 - (void)showToast:(UIView *)toast duration:(NSTimeInterval)duration position:(id)point {
     toast.center = [self centerPointForPosition:point withToast:toast];
     toast.alpha = 0.0;
-    
+    toast.layer.zPosition = CGFLOAT_MAX;
+
     if (CSToastHidesOnTap) {
         UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:toast action:@selector(handleToastTapped:)];
         [toast addGestureRecognizer:recognizer];
