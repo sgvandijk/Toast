@@ -347,7 +347,7 @@ static const NSString * CSToastActivityViewKey  = @"CSToastActivityViewKey";
         titleLabel = [[UILabel alloc] init];
         titleLabel.numberOfLines = CSToastMaxTitleLines;
         titleLabel.font = [UIFont boldSystemFontOfSize:CSToastTitleFontSize];
-        titleLabel.textAlignment = NSTextAlignmentLeft;
+        titleLabel.textAlignment = imageView != nil ? NSTextAlignmentLeft : NSTextAlignmentCenter;
         titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
         titleLabel.textColor = [UIColor whiteColor];
         titleLabel.backgroundColor = [UIColor clearColor];
@@ -380,7 +380,7 @@ static const NSString * CSToastActivityViewKey  = @"CSToastActivityViewKey";
     CGFloat titleWidth, titleHeight, titleTop, titleLeft;
     
     if(titleLabel != nil) {
-        titleWidth = titleLabel.bounds.size.width;
+        titleWidth = MAX(titleLabel.bounds.size.width,messageLabel.frame.size.width);
         titleHeight = titleLabel.bounds.size.height;
         titleTop = CSToastVerticalPadding;
         titleLeft = imageLeft + imageWidth + CSToastHorizontalPadding;
