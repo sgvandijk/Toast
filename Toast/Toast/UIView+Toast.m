@@ -1,7 +1,6 @@
 //
 //  UIView+Toast.m
 //  Toast
-//  Version 2.2
 //
 //  Copyright 2013 Charles Scalesse.
 //
@@ -298,7 +297,10 @@ static const NSString * CSToastActivityViewKey  = @"CSToastActivityViewKey";
         return CGSizeMake(ceilf(boundingRect.size.width), ceilf(boundingRect.size.height));
     }
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
     return [string sizeWithFont:font constrainedToSize:constrainedSize lineBreakMode:lineBreakMode];
+#pragma clang diagnostic pop
 }
 
 - (UIView *)viewForMessage:(NSString *)message title:(NSString *)title image:(UIImage *)image {

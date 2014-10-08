@@ -1,6 +1,6 @@
 Toast for iOS
 =============
-*Version 2.2*
+*Version 2.3*
 
 Toast is an Objective-C category that adds Android-style toast notifications to the UIView object class. It is intended to be simple, lightweight, and easy to use.
 
@@ -17,23 +17,25 @@ Screenshots
 
 Examples
 ---------
-    // basic usage
-    [self.view makeToast:@"This is a piece of toast."];
+```objc
+// basic usage
+[self.view makeToast:@"This is a piece of toast."];
 
-    // toast with duration, title, and position
-    [self.view makeToast:@"This is a piece of toast with a title." 
-                 duration:3.0
-                 position:@"top"
-                    title:@"Toast Title"];
+// toast with duration, title, and position
+[self.view makeToast:@"This is a piece of toast with a title." 
+            duration:3.0
+            position:@"top"
+               title:@"Toast Title"];
             
-    // toast with an image
-    [self.view makeToast:@"This is a piece of toast with an image." 
-                duration:3.0
-                position:[NSValue valueWithCGPoint:CGPointMake(110, 110)]
-                   image:[UIImage imageNamed:@"toast.png"]];
+// toast with an image
+[self.view makeToast:@"This is a piece of toast with an image." 
+            duration:3.0
+            position:[NSValue valueWithCGPoint:CGPointMake(110, 110)]
+               image:[UIImage imageNamed:@"toast.png"]];
                 
-    // display toast with an activity spinner
-    [self.view makeToastActivity];
+// display toast with an activity spinner
+[self.view makeToastActivity];
+```
     
 See the demo project for more examples.
 
@@ -44,7 +46,7 @@ Install with [CocoaPods](http://cocoapods.org) by adding the following to your P
 
 ``` ruby
 platform :ios, '7.0'
-pod 'Toast', '~> 2.2'
+pod 'Toast', '~> 2.3'
 ```
 
 or add manually: 
@@ -55,7 +57,7 @@ or add manually:
 
 MIT License
 -----------
-    Copyright (c) 2013 Charles Scalesse.
+    Copyright (c) 2014 Charles Scalesse.
 
     Permission is hereby granted, free of charge, to any person obtaining a
     copy of this software and associated documentation files (the
