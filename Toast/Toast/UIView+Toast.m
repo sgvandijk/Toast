@@ -115,7 +115,7 @@ NSString * const CSToastPositionBottom          = @"bottom";
 {
     toast.center = [self centerPointForPosition:position withToast:toast];
     toast.alpha = 0.0;
-    toast.layer.zPosition = CGFLOAT_MAX;
+    toast.layer.zPosition = 1000;
 
     if (CSToastHidesOnTap) {
         UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:toast action:@selector(handleToastTapped:)];
