@@ -1,6 +1,8 @@
 Toast for iOS
 =============
 
+[![Build Status](https://travis-ci.org/scalessec/Toast.svg?branch=2.4)](https://travis-ci.org/scalessec/Toast)
+
 Toast is an Objective-C category that adds Android-style toast notifications to the UIView object class. It is intended to be simple, lightweight, and easy to use.
 
 
@@ -40,7 +42,7 @@ Install with [CocoaPods](http://cocoapods.org) by adding the following to your P
 
 ``` ruby
 platform :ios, '7.0'
-pod 'Toast', '~> 2.4’
+pod 'Toast', '~> 2.4'
 ```
 
 or add manually: 
